@@ -11,10 +11,4 @@ Additional:
 7. Resize output to fit the screen
 
 
-## App divided into: 
-```mermaid
-Project TD
-	CalculatorWrapper-->OutputScreen
-	CalculatorWrapper-->ButtonBox
-	ButtonBox-->Button
-```
+
