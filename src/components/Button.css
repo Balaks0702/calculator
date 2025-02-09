@@ -1,0 +1,25 @@
+button {
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+
+    background-color: grey;
+    color: white; 
+}
+
+button:hover {
+    background-color:rgb(50, 170, 155); /*shade of turquoise*/
+}
+
+.equals {
+    grid-column: 3 / 5;
+    background-color:teal;
+}
+
+.equals:hover {
+    background-color:maroon;
+}
+
