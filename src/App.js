@@ -66,6 +66,19 @@ const App = () => {
     });
   };
 
+  //percentage
+  const percentClickHandler = () => {
+    let num = calc.num ? parseFloat(removeSpaces(calc.num)) : 0;
+    let res = calc.res ? parseFloat(removeSpaces(calc.res)) : 0;
+
+    setCalc({
+      ...calc,
+      num: (num /= Math.pow(100, 1)),
+      res: (res /= Math.pow(100, 1)),
+      sign: "",
+    });
+  };
+
   //outputs answer
   const equalsClickHandler = () => {
     if (calc.sign && calc.num) {
@@ -129,10 +142,12 @@ const App = () => {
                   ? resetClickHandler
                   : btn === "+-"
                   ? invertClickHandler
-                  : btn === "="
-                  ? equalsClickHandler
+                  : btn === "%"
+                  ? percentClickHandler
                   : btn === "/" || btn === "X" || btn === "-" || btn === "+"
                   ? signClickHandler
+                  : btn === "="
+                  ? equalsClickHandler
                   : btn === "."
                   ? commaClickHandler
                   : numClickHandler
