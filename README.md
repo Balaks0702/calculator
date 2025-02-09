@@ -12,8 +12,9 @@ Additional:
 
 
 ## App divided into: 
-	Calculator-Wrapper
-	________|_________
-Output-Screen	      Button-Box
-			   |
-			 Button
+```mermaid
+Project TD
+	Calculator Wrapper-->Output Screen;
+	Calculator Wrapper-->Button Box;
+	Button Box-->Button;
+```
