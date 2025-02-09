@@ -42,6 +42,17 @@ const App = () => {
     }
   };
 
+  //Decimal
+  const commaClickHandler = (e) => {
+    e.preventDefault();
+    const value = e.target.innerHTML;
+
+    setCalc({
+      ...calc,
+      num: !calc.num.toString().includes(".") ? calc.num + value : calc.num,
+    });
+  };
+
   //add,sub,multiply,divide
   const signClickHandler = (e) => {
     e.preventDefault();
@@ -55,7 +66,7 @@ const App = () => {
     });
   };
 
-  //result handled
+  //outputs answer
   const equalsClickHandler = () => {
     if (calc.sign && calc.num) {
       const math = (a, b, sign) =>
@@ -110,6 +121,8 @@ const App = () => {
                   ? equalsClickHandler
                   : btn === "/" || btn === "X" || btn === "-" || btn === "+"
                   ? signClickHandler
+                  : btn === "."
+                  ? commaClickHandler
                   : numClickHandler
                 }
               />
