@@ -7,8 +7,11 @@
 4. invert values
 5. reset screen
 Additional: 
-6. Format large numbers
-7. Resize output to fit the screen
+- Format large numbers
+-  Resize output to fit the screen
+
+## Deployed on -
+https://balaks0702.github.io/calculator/
 
 
 
